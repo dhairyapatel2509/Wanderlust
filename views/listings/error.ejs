@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles/error.css">
+</head>
+<style>
+    /* styles/error.css */
+
+/* Reset some default browser styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styling for the header */
+header {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Styling for the main content section */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h2 {
+    color: #ff4d4d;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+/* Styling for the error details */
+.error-details {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.error-details h3 {
+    margin-top: 0;
+}
+
+/* Styling for links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the footer */
+footer {
+    margin-top: 20px;
+    font-size: 0.875rem;
+    color: #666;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Error <%= statusCode %></h1>
+    </header>
+    <main>
+        <section>
+            <h2><%= message %></h2>
+            <h3><%= name %></h3>
+            <p>Oops! Something went wrong. We’re sorry for the inconvenience.</p>
+            <a href="/listings">Go back to the homepage</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <%= new Date().getFullYear() %> My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
